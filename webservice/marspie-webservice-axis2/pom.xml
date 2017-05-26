@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.marspie.demo</groupId>
+		<artifactId>marspie-webservice</artifactId>
+		<version>1.0-SNAPSHOT</version>
+	</parent>
+	<artifactId>marspie-webservice-axis2</artifactId>
+	<packaging>war</packaging>
+	<name>marspie-webservice-axis2 Maven Webapp</name>
+	<url>http://maven.apache.org</url>
+	
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+	<build>
+		<finalName>marspie-webservice-axis2</finalName>
+		<plugins>
+			<plugin>
+		    	<groupId>org.eclipse.jetty</groupId>
+		        <artifactId>jetty-maven-plugin</artifactId>
+		        <version>9.4.5.v20170502</version>
+		        <configuration>
+		            <httpConnector>
+		                <port>8082</port>
+		            </httpConnector>  
+		        </configuration>
+		    </plugin>
+		</plugins>
+	</build>
+</project>
