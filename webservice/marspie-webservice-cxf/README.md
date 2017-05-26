@@ -1,1 +1,1 @@
-mvn clean jetty:run-war 
+mvn clean jetty:run
