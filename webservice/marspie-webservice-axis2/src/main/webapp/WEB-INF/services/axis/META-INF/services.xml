@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<serviceGroup>
+	<service name="HelloWorld">
+	    <description>axis2 service</description>
+	    <parameter name="ServiceClass">com.marspie.demo.HelloWorld</parameter>
+		<!--新版本的写法-->
+		<parameter name="ServiceObjectSupplier" locked="false">
+			org.apache.axis2.extensions.spring.receivers.SpringServletContextObjectSupplier
+		</parameter>
+
+		<!--这是老版本的写法,新版本的应该用上面的写法-->
+	    <!--<parameter name="ServiceObjectSupplier">-->
+	    	<!--org.apache.axis2.extensions.spring.receivers.SpringAppContextAwareObjectSupplier-->
+	    <!--</parameter>-->
+	    <parameter name="SpringBeanName">helloWorld</parameter>
+	
+	    <messageReceivers>
+	        <messageReceiver mep="http://www.w3.org/2004/08/wsdl/in-only" class="org.apache.axis2.rpc.receivers.RPCInOnlyMessageReceiver" />
+	        <messageReceiver  mep="http://www.w3.org/2004/08/wsdl/in-out"  class="org.apache.axis2.rpc.receivers.RPCMessageReceiver"/>
+	    </messageReceivers>
+	</service>
+
+	<service name="FileTrans">
+		<description>filse transfer axis2 service</description>
+		<parameter name="ServiceClass" locked="false">com.marspie.demo.FileTrans</parameter>
+<!-- 		<parameter name="ServiceObjectSupplier" locked="false">
+			org.apache.axis2.extensions.spring.receivers.SpringServletContextObjectSupplier
+		</parameter> -->
+		<parameter name="SpringBeanName">fileTrans</parameter>
+		
+<!-- 		<messageReceivers>
+			<messageReceiver class="org.apache.axis2.receivers.RawXMLINOutMessageReceiver" />
+		</messageReceivers> -->
+	 
+		<operation name="upload">
+			<actionMapping>urn:upload</actionMapping>
+			<messageReceiver
+				class="org.apache.axis2.receivers.RawXMLINOutMessageReceiver" />
+		</operation>
+		<operation name="download">
+			<actionMapping>urn:download</actionMapping>
+			<messageReceiver class="org.apache.axis2.receivers.RawXMLINOutMessageReceiver" />
+		</operation>
+	 
+	</service>
+</serviceGroup> 
