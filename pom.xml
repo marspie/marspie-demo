@@ -16,6 +16,7 @@
 		<module>office</module>
 		<module>xml</module>
 		<module>restful</module>
+		<module>designpatterns</module>
 	</modules>
 
 	<properties>

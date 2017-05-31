@@ -8,13 +8,13 @@
 		<version>1.0-SNAPSHOT</version>
 		<relativePath>../</relativePath>
 	</parent>	
-	<artifactId>marspie-designmode</artifactId>
-	<name>Marspie :: Design :: Mode</name>
+	<artifactId>marspie-designpatterns</artifactId>
+	<name>Marspie :: Design :: Patterns</name>
 	<packaging>pom</packaging>
 
 	<modules>
-		<module>marspie-designmode-factory</module>
-		<module>marspie-designmode-singleton</module>
-		<module>marspie-designmode-observer</module>
+		<module>marspie-designpatterns-factory</module>
+		<module>marspie-designpatterns-singleton</module>
+		<module>marspie-designpatterns-observer</module>
 	</modules>
 </project>
