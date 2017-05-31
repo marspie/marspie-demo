@@ -11,6 +11,7 @@
 	<url>http://marspie.com/</url>
 
 	<modules>
+		<module>basis</module>
 		<module>webservice</module>
 		<module>json</module>
 		<module>office</module>
