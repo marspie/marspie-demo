@@ -18,6 +18,7 @@
 		<module>xml</module>
 		<module>restful</module>
 		<module>designpatterns</module>
+		<module>hodgepodge</module>
 	</modules>
 
 	<properties>
