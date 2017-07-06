@@ -14,5 +14,6 @@
 
 	<modules>
 		<module>marspie-hodgepodge-baidu</module>
+		<module>marspie-hodgepodge-webdev</module>
 	</modules>
 </project>
